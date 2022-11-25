@@ -1,0 +1,233 @@
+// Write a program that displays some products choices for the user. The program shouldask the user if he/she wants to order a product. 
+//While the user choses yes, The usershould keep choosing a product to be added to his/her cart. 
+//When the user chooses no,the program should display the list of the products added to his/her cart as output.
+
+import java.util.Scanner;
+
+
+public class Main{
+
+  public static void main(String[]args) {
+ 
+  Scanner product = new Scanner(System.in);
+  String orderCart = "Your orders are the following: \n";
+  int grantOrder, orderList;
+  float totalPayment = 0, Cash;
+ 
+ System.out.println("-----------WELCOME TO PET THEME.PH!-------------");
+ System.out.println(" DO YOU WANT TO ORDER? [1-YES, 2-NO]            ");
+ System.out.println("Please enter the number of your choice.         ");
+ System.out.println("------------------------------------------------");
+ System.out.print  ("Choice:");
+  grantOrder = product.nextInt(); 
+ 
+  do {
+  if (grantOrder == 1) {
+System.out.println("------------WELCOME TO PET THEM.PH!--------------");
+System.out.println("WHAT TO ORDER? [1-CLOTHES,2-ACCESORIES,3-DOGFOOD ");
+System.out.println(" Please enter the number you preferred to order. ");
+System.out.println("-------------------------------------------------");
+System.out.print  ("Preferred Order:");
+ orderList = product.nextInt();
+ 
+  if(orderList == 1) {
+ System.out.println("----------WELCOME TO PET THEME.PH!-------------");
+ System.out.println("*****************  CLOTHES  *******************");
+ System.out.println(" [1] Cool Pet Vest                : P120.00    ");
+ System.out.println(" [2] Shirt Hawaii Style           : P150.00    ");
+ System.out.println(" [3] Sunscreen Teddy Dress        : P110.00    ");
+ System.out.println(" [4] Jersey Puppy Prints          : P100.00    ");
+ System.out.println(" [5] Marvel Puppy Vest            : P130.00    ");
+ System.out.println("Please enter the number you preferred to order.");
+ System.out.println("-----------------------------------------------");
+ System.out.print  ("Preferred Order:");
+	    
+   float  CoolPetVest= 120 , ShirtHawaiiStyle = 150, SunscreenTeddyDress = 110, JerseyPuppyPrints = 100, MarvelPuppyVest= 130;
+   int orderChoice = product.nextInt();
+	    
+   switch (orderChoice) {
+   case 1: 
+   System.out.println("Cool Pet Vest: P120.00 added to cart");
+   totalPayment+=CoolPetVest;
+   String order1 = "Cool Pet Vest: P120.00 \n";
+   orderCart+=order1;
+   break;
+		
+   case 2: 
+   System.out.println("Shirt Hawaii Style   : P150.00  added to cart");
+   totalPayment+=ShirtHawaiiStyle;
+   String order2 = " Shirt Hawaii Style          : P150.00  \n";
+   orderCart+=order2;
+   break;
+		
+  case 3: 
+  System.out.println("Sunscreen Teddy Dress: P110.00 added to cart");
+  totalPayment+=SunscreenTeddyDress;
+		  String order3 = "Sunscreen Teddy Dress : P110.00 \n";
+  orderCart+=order3;
+  break;
+	      
+  case 4: 
+  System.out.println("Jersey Puppy Prints: P100.00 added to cart");
+  totalPayment+=JerseyPuppyPrints;
+		  String order4 = "Jersey Puppy Prints : P100.00 \n";
+  orderCart+=order4;
+  break;
+  
+  case 5: 
+  System.out.println("Marvel Puppy Vest: P130.00 added to cart");
+  totalPayment+=MarvelPuppyVest;
+		  String order5 = " Marvel Puppy Vest: P130.00 \n";
+  orderCart+=order5;
+  break;
+
+  default:
+  System.out.println("Enter valid entry only base on the choices above!");
+  break;  
+ }
+	    
+ } else if(orderList == 2) {
+ System.out.println("------------WELCOME TO PET THEME.PH!------------");
+  System.out.println("****************  ACCESORIES  *****************");
+  System.out.println(" [1] Dog Bowl                      : P50.00    ");
+  System.out.println(" [2] Dog Bed                       : P850.00   ");
+  System.out.println(" [3] Puppy Chew Toy                : P50.00    ");
+  System.out.println(" [4] Dog Leash                     : P80.00    ");
+  System.out.println(" [5] Dog Cage                      : P1500.00  ");
+  System.out.println("Please enter the number you preferred to order.");
+  System.out.println("-----------------------------------------------");
+  System.out.print  ("Preferred Order:");
+	    
+  float DogBowl=50, DogBed=850, PuppyChewToy=50, DogLeash=80, DogCage=1500;
+  int orderChoice = product.nextInt();
+	    
+  switch (orderChoice) {
+  case 1: 
+  System.out.println("Dog Bowl : P50.00 added to cart");
+  totalPayment+=DogBowl;
+  String order1 = "Dog Bowl: P50.00 \n";
+  orderCart+=order1;
+  break;
+	
+  case 2: 
+  System.out.println("Dog Bed: P850.00 added to cart");
+  totalPayment+=DogBed;
+		  String order2 = "Dog Bed : P850.00 \n";
+  orderCart+=order2;
+  break;
+	
+  case 3: 
+  System.out.println("Puppy Chew Toy: P50.00  added to cart");
+  totalPayment+=PuppyChewToy;
+  String order3 ="Puppy Chew Toy: P50.00 \n";
+  orderCart+=order3;
+  break;
+ 
+  case 4: 
+  System.out.println("Dog Leash: P80.00  added to cart");
+  totalPayment+=DogLeash;
+  String order4 = "Dog Leash: P80.00 \n";
+  orderCart+=order4;
+  break;
+ 
+  case 5: 
+  System.out.println("Dog Cage: P1500.00  added to cart");
+  totalPayment+=DogCage;
+  String order5 = "Dog Cage: P1500.00 \n";
+  orderCart+=order5;
+  break;
+	      
+  default:
+  System.out.println("Enter valid entry only base on the choices above!");
+  break;  
+	    
+}
+
+}
+   else if(orderList == 3) {
+ System.out.println("--------------WELCOME TO PE THEM.PH!-------------");
+ System.out.println("**************   DOG FOOD   *********************");
+ System.out.println("  [1] Pedigree        1kl           : P150.00    ");
+ System.out.println("  [2] Azu             1kl           : P130.00    ");
+ System.out.println("  [3] Aozi            1kl           : P175.00    ");
+ System.out.println("  [4] Vitality        1kl           : P180.00    ");
+ System.out.println("  [5] Nutri Chunks    1kl           : P160.00    "); 
+ System.out.println("Please enter the number you preferred to order.  ");
+ System.out.println("-------------------------------------------------");
+ System.out.print  ("Preffered Order:");
+	    
+ float Pedigree = 150 , Azu = 130, Aozi = 175, Vitality=180, NutriChunks=160;
+ int orderChoice = product.nextInt();
+	    
+ switch (orderChoice) {
+ case 1: 
+ System.out.println(" Pedigree  : P150.00 added to cart");
+ totalPayment+=Pedigree;
+ String order1 = "Pedigree     : P150.00 \n";
+ orderCart+=order1;
+ break;
+
+ case 2: 
+ System.out.println("Azu: P130.00 added to cart");
+ totalPayment+=Azu;
+		  String order2 = "  Azu        : P130.00 \n";
+ orderCart+=order2;
+ break;
+	
+ case 3: 
+ System.out.println(" Aozi : P175.00  added to cart");
+ totalPayment+=Aozi;
+ String order3 = " Aozi   : P175.00 \n";
+ orderCart+=order3;
+ break;
+ 
+ case 4: 
+ System.out.println(" Vitality : P180.00  added to cart");
+ totalPayment+=Vitality;
+ String order4 = "  Vitality : P180.00 \n";
+ orderCart+=order4;
+ break;
+ 
+ case 5: 
+ System.out.println("Nutri Chunks: P160.00  added to cart");
+ totalPayment+=NutriChunks;
+ String order5 = " Nutri Chunks   : P160.00 \n";
+ orderCart+=order5;
+ break;
+	      
+ default:
+ System.out.println("Enter valid entry only base on the choices above!");
+ break;  
+	      
+ }
+	    
+ }
+   
+}
+    else {
+System.out.println(" Have a blessed day!)");
+ System.exit(0);
+   
+ }
+   
+System.out.println("Order again?");
+System.out.println("[1] - Yes");
+System.out.println("[2] - No");
+grantOrder = product.nextInt();
+   
+} while(grantOrder == 1);
+System.out.println("Amount to pay: "+totalPayment);
+ System.out.print("Enter cash payment: ");
+ Cash = product.nextFloat();
+  
+System.out.println("-------------------R E C E I P T --------------");
+System.out.println(orderCart);
+ System.out.printf("TOTAL: %.2f\n",totalPayment);
+System.out.println("Change: " + (Cash - totalPayment));
+ System.out.println("----------------------------------------------");
+     
+System.out.println("Thank you and come again!");
+ 
+ }
+ 
+}
