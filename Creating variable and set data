@@ -1,0 +1,29 @@
+//Create a variable firstNum and set the data to 10. Create another variable secondNum and set the data to 5. 
+//Display as output the sum, difference, product, quotient and modulo of the two variables. 
+//As for quotient, maintain 2 decimal places for the output.
+
+
+public class Main {
+
+    public static void main(String[] args) {
+            int firstNum = 10;
+            int secondNum = 5;
+
+    int sum, difference, product,modulo;
+    float quotient;
+
+    sum = firstNum + secondNum;
+    difference = firstNum - secondNum;
+    product = firstNum * secondNum;
+    quotient = firstNum / secondNum;
+    modulo = firstNum % secondNum;
+
+        System.out.println("Sum is: "+sum);
+        System.out.println("Difference is: "+difference);
+        System.out.println("Product is: "+product);
+        System.out.println("Division is: "+quotient);
+        System.out.println("Modulo is: "+modulo);
+
+
+    }
+}
