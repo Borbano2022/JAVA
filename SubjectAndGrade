@@ -1,0 +1,61 @@
+//Write a program that will ask the user a subject name and a grade.
+//The usershould enter the name of a subject and a corresponding grade while the user responds 'Yes' to the prompt. 
+///When the user chooses 'No', display the entered subjects aswell as their corresponding grades and display the General average of the entered grades.
+
+
+import java.util.Scanner;
+
+public class Main{
+    
+    public static void main(String[]args){
+
+    Scanner in = new Scanner(System.in);    
+    System.out.println("Enter subject and grade?");
+    System.out.println("1 - Yes");
+    System.out.println("2 - No");
+   System.out.println("-----------------");
+    int uInput = in.nextInt();
+    String subjects = "Entered subjects are: \n";
+    String gradesEntered = "";
+    float grades, sum = 0, average;
+    int counter = 0;
+
+    if (uInput== 1) {
+
+        do {
+
+            System.out.println("Enter subject name: ");
+            String subjectName = in.next();
+
+            subjects += subjectName + " Grade: ";
+
+
+            System.out.println("Enter subject grade: ");
+            float grade = in.nextFloat();
+            sum += grade;
+            subjects += grade + "\n";
+            gradesEntered += grade + "\n";
+
+
+            counter++;
+
+            System.out.println("Enter again?");
+            System.out.println("1 - Yes");
+            System.out.println("2 - No");
+             System.out.println("----------------");
+            uInput = in.nextInt();
+
+        } while(uInput == 1);
+
+        System.out.printf(subjects);
+        average = sum / counter;
+        System.out.printf("average: %.2f" , average);
+
+
+    } else {
+
+        System.out.println("Take it easy!~ ");
+    }
+
+  }
+}
